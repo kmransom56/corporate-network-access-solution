@@ -30,15 +30,16 @@ sudo zerotier-cli info
 # 200 info 169a7c25c2 1.14.2 ONLINE
 ```
 
-## 🚀 Service Access URLs - READY FOR USE
+## 🚀 Service Access URLs - VERIFIED OPERATIONAL
 
-Your corporate network access solution services are now accessible via ZeroTier:
+Your corporate network access solution services accessible via ZeroTier:
 
-- **🛡️ Fortinet Manager**: http://172.24.245.58:3002
-- **📊 FortiGate Dashboard**: http://172.24.245.58:8000  
-- **🤖 AI Network Management**: http://172.24.245.58:5000
-- **🔍 Neo4j Browser**: http://172.24.245.58:7474
-- **🔐 SSH Access**: ssh keith@172.24.245.58
+- **📊 FortiGate Dashboard**: http://172.24.245.58:10000 ✅ **ACTIVE**
+- **🔐 SSH Access**: ssh keith@172.24.245.58 ✅ **ACTIVE**
+- **⚡ HAProxy Load Balancer**: http://172.24.245.58:80 ✅ **ACTIVE**
+- **📈 HAProxy Stats**: http://172.24.245.58:8404 ✅ **ACTIVE**
+
+**Note**: Other services (Fortinet Manager, AI Network Management, Neo4j) require Docker container startup. The FortiGate Dashboard and SSH access are immediately available for network management.
 
 ## Corporate Workstation Access
 
@@ -48,12 +49,13 @@ From any corporate device connected to ZeroTier network `af78bf94368967a6`:
 # SSH to home server
 ssh keith@172.24.245.58
 
-# Access web services
-curl http://172.24.245.58:8000/health
-curl http://172.24.245.58:3002/
+# Access web services  
+curl http://172.24.245.58:10000/  # FortiGate Dashboard
+curl http://172.24.245.58:5000/health  # HAProxy health check
 
 # Network management via browser
-# Open: http://172.24.245.58:8000 (FortiGate Dashboard)
+# Open: http://172.24.245.58:10000 (FortiGate Dashboard)
+# Open: http://172.24.245.58:8404 (HAProxy Statistics)
 ```
 
 ## Network Architecture Complete

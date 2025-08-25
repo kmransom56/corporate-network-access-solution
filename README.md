@@ -118,10 +118,10 @@ sudo zerotier-cli join [YOUR-NETWORK-ID]
 - SSH Access: `ssh user@100.x.x.x`
 
 **Via ZeroTier (Currently Active):**
-- Fortinet Manager: `http://172.24.245.58:3002`
-- FortiGate Dashboard: `http://172.24.245.58:8000`
-- AI Network Management: `http://172.24.245.58:5000`
-- SSH Access: `ssh keith@172.24.245.58`
+- FortiGate Dashboard: `http://172.24.245.58:10000` ✅ 
+- HAProxy Load Balancer: `http://172.24.245.58:80` ✅
+- SSH Access: `ssh keith@172.24.245.58` ✅
+- HAProxy Statistics: `http://172.24.245.58:8404` ✅
 
 ## 📊 Supported Network Management Applications
 
